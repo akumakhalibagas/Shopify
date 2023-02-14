@@ -7,10 +7,10 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import coil.load
+import com.makhalibagas.core.domain.model.ProductShopify
+import com.makhalibagas.core.utils.*
 import com.makhalibagas.shopify.databinding.ActivityDetailBinding
-import com.makhalibagas.shopify.domain.model.ProductShopify
 import com.makhalibagas.shopify.presentation.checkout.CheckoutActivity
-import com.makhalibagas.shopify.utils.*
 
 class DetailActivity : AppCompatActivity() {
 

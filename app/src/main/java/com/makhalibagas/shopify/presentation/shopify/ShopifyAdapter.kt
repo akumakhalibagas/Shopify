@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import com.makhalibagas.core.domain.model.ProductShopify
+import com.makhalibagas.core.utils.toRupiahFormat
 import com.makhalibagas.shopify.databinding.ItemShopifyBinding
-import com.makhalibagas.shopify.domain.model.ProductShopify
-import com.makhalibagas.shopify.utils.toRupiahFormat
 
 class ShopifyAdapter : RecyclerView.Adapter<ShopifyAdapter.ViewHolder>() {
     private val listData = ArrayList<ProductShopify>()

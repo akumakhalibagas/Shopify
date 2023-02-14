@@ -5,13 +5,14 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.makhalibagas.moviesaja.state.UiStateWrapper
+import com.makhalibagas.core.state.UiStateWrapper
+import com.makhalibagas.core.utils.collectLifecycleFlow
+import com.makhalibagas.core.utils.isVisible
+import com.makhalibagas.core.utils.shopify
+import com.makhalibagas.core.utils.viewBinding
 import com.makhalibagas.shopify.databinding.ActivityShopifyBinding
 import com.makhalibagas.shopify.presentation.detail.DetailActivity
 import com.makhalibagas.shopify.presentation.transaction.TransactionActivity
-import com.makhalibagas.shopify.utils.collectLifecycleFlow
-import com.makhalibagas.shopify.utils.shopify
-import com.makhalibagas.shopify.utils.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -33,7 +34,7 @@ class ShopifyActivity : AppCompatActivity() {
         viewModel.getShopifyProduct()
         collectLifecycleFlow(viewModel.productListState) { state ->
             when (state) {
-                is UiStateWrapper.Loading -> {}
+                is UiStateWrapper.Loading -> binding.pb.isVisible(state.isLoading)
                 is UiStateWrapper.Success -> shopifyAdapter.setData(state.data)
                 is UiStateWrapper.Error -> Toast.makeText(this, state.msg, Toast.LENGTH_SHORT)
                     .show()

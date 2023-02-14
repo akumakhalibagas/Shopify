@@ -4,10 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import com.makhalibagas.core.utils.collectLifecycleFlow
+import com.makhalibagas.core.utils.viewBinding
 import com.makhalibagas.shopify.databinding.ActivityTransactionBinding
 import com.makhalibagas.shopify.presentation.shopify.ShopifyActivity
-import com.makhalibagas.shopify.utils.collectLifecycleFlow
-import com.makhalibagas.shopify.utils.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

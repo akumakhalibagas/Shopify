@@ -1,9 +1,9 @@
 package com.makhalibagas.shopify.presentation.transaction
 
 import androidx.lifecycle.ViewModel
-import com.makhalibagas.shopify.domain.model.ShopifyTransaction
-import com.makhalibagas.shopify.domain.usecase.ShopifyLocalUseCase
-import com.makhalibagas.shopify.utils.collectLifecycleFlow
+import com.makhalibagas.core.domain.model.ShopifyTransaction
+import com.makhalibagas.core.domain.usecase.ShopifyLocalUseCase
+import com.makhalibagas.core.utils.collectLifecycleFlow
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow

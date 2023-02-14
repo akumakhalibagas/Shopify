@@ -1,11 +1,10 @@
 package com.makhalibagas.shopify.presentation.shopify
 
 import androidx.lifecycle.ViewModel
-import com.makhalibagas.moviesaja.state.UiStateWrapper
-import com.makhalibagas.shopify.data.source.remote.Resource
-import com.makhalibagas.shopify.domain.model.ProductShopify
-import com.makhalibagas.shopify.domain.usecase.ShopifyUseCase
-import com.makhalibagas.shopify.utils.collectLifecycleFlow
+import com.makhalibagas.core.domain.model.ProductShopify
+import com.makhalibagas.core.domain.usecase.ShopifyUseCase
+import com.makhalibagas.core.state.UiStateWrapper
+import com.makhalibagas.core.utils.collectLifecycleFlow
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
@@ -22,12 +21,14 @@ class ShopifyViewModel @Inject constructor(
     fun getShopifyProduct() {
         collectLifecycleFlow(getProductShopify()) { resource ->
             when (resource) {
-                is Resource.Loading -> _productListState.emit(UiStateWrapper.Loading(true))
-                is Resource.Success -> {
+                is com.makhalibagas.core.data.source.remote.Resource.Loading -> _productListState.emit(
+                    UiStateWrapper.Loading(true)
+                )
+                is com.makhalibagas.core.data.source.remote.Resource.Success -> {
                     _productListState.emit(UiStateWrapper.Loading(false))
                     _productListState.emit(UiStateWrapper.Success(resource.data))
                 }
-                is Resource.Error -> {
+                is com.makhalibagas.core.data.source.remote.Resource.Error -> {
                     _productListState.emit(UiStateWrapper.Loading(false))
                     _productListState.emit(UiStateWrapper.Error(resource.msg))
                 }

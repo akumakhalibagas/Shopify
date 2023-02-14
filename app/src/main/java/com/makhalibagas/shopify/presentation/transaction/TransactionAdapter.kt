@@ -4,8 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import com.makhalibagas.core.domain.model.ShopifyTransaction
 import com.makhalibagas.shopify.databinding.ItemTransactionBinding
-import com.makhalibagas.shopify.domain.model.ShopifyTransaction
 
 class TransactionAdapter : RecyclerView.Adapter<TransactionAdapter.ViewHolder>() {
     private val listData = ArrayList<ShopifyTransaction>()

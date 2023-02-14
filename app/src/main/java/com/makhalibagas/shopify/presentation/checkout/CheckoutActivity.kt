@@ -6,14 +6,14 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import coil.load
+import com.makhalibagas.core.domain.model.ProductShopify
+import com.makhalibagas.core.domain.model.ShopifyTransaction
+import com.makhalibagas.core.utils.qty
+import com.makhalibagas.core.utils.shopify
+import com.makhalibagas.core.utils.toRupiahFormat
+import com.makhalibagas.core.utils.viewBinding
 import com.makhalibagas.shopify.databinding.ActivityCheckoutBinding
-import com.makhalibagas.shopify.domain.model.ProductShopify
-import com.makhalibagas.shopify.domain.model.ShopifyTransaction
 import com.makhalibagas.shopify.presentation.transaction.TransactionActivity
-import com.makhalibagas.shopify.utils.qty
-import com.makhalibagas.shopify.utils.shopify
-import com.makhalibagas.shopify.utils.toRupiahFormat
-import com.makhalibagas.shopify.utils.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
