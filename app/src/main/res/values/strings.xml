@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Shopify</string>
+    <string name="text_error_network_not_avail">Terdapat masalah pada internet</string>
+    <string name="example_address">Bagas Makhali ( +6282313666691 )\nBangsa, Kebasen, Banyumas\nJawa Tengah</string>
+    <string name="tv_alamat_pengiriman">Alamat Pengiriman</string>
+    <string name="tv_checkout">Checkout</string>
+    <string name="tv_transaksi">Transaksi</string>
+</resources>
