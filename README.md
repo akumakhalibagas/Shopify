@@ -1,5 +1,3 @@
 # Shopify
 
-Menggunakan API Shopify\n
-Menggunakan Modular dan Monolith\n
-Menggunakan Dagger Hilt dan Flow Coroutine
+Menggunakan API Shopify\nMenggunakan Modular dan Monolith\nMenggunakan Dagger Hilt dan Flow Coroutine
